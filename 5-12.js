@@ -144,29 +144,74 @@
 
 // console.log(products([1, 3, 9, 4]))
 
-function stringRotation(str1, str2){
 
-    if(str1.length !== str2.length){
-        return false;
+
+
+// function stringRotation(str1, str2){
+
+//     if(str1.length !== str2.length){
+//         return false;
+//     }
+
+//     let str1Repeat = str1.repeat(5)
+//     console.log(str1Repeat)
+
+//     if(str1Repeat.includes(str2)){
+//         return true
+//     }
+
+//     else{
+//         return false;
+//     }
+
+
+
+// }
+
+// console.log(stringRotation("amazon", "azonma"))
+
+// console.log(stringRotation("amazon", "azonam"))
+
+
+function twoDArray(arr){
+
+    for(let i = 0; i < arr.length; i++){
+
+        // console.log(arr[i])
+
+
+        for(let j = 0; j < arr[i].length; j++){
+
+            // console.log(arr[i][j])
+
+
+            if(arr[i][j] = 0){
+                
+                arr[i].forEach(element => {
+                    element = 0;
+                });
+            }
+
+        }
+
     }
 
-    let str1Repeat = str1.repeat(5)
-    console.log(str1Repeat)
-
-    if(str1Repeat.includes(str2)){
-        return true
-    }
-
-    else{
-        return false;
-    }
-
-
+    return arr;
 
 }
 
-console.log(stringRotation("amazon", "azonma"))
 
-console.log(stringRotation("amazon", "azonam"))
+let input = 
+[
+
+[1,0,1,1,0],
+[0,1,1,1,0],
+[1,1,1,1,1],
+[1,0,1,1,1],
+[1,1,1,1,1]
+
+];
+
+console.log(twoDArray(input))
 
 
