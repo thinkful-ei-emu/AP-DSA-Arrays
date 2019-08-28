@@ -85,38 +85,38 @@
 
 
 
-function removeChar(string, char){
+// function removeChar(string, char){
 
-    // let newString = ''
+//     // let newString = ''
 
-    for(let i = 0; i < string.length; i++){
-        console.log('i', string[i])
+//     for(let i = 0; i < string.length; i++){
+//         console.log('i', string[i])
 
-        for(let j = 0; j < char.length; j++){
+//         for(let j = 0; j < char.length; j++){
 
-            console.log('j', char[j])
+//             console.log('j', char[j])
             
-            if(string[i] === char[j]){
-                string = string.slice(0, i) + '' + string.slice(i + 1)
-            }
-        }
-    }
+//             if(string[i] === char[j]){
+//                 string = string.slice(0, i) + '' + string.slice(i + 1)
+//             }
+//         }
+//     }
 
-    return string;
+//     return string;
 
-    // for (let i = 0; i < char.length; i++){
+//     // for (let i = 0; i < char.length; i++){
 
-    //     if(string.includes(char[i])){
-    //         console.log(char[i])
-    //         newString = string.replace(char[i], '')
-    //     }
-    // }
+//     //     if(string.includes(char[i])){
+//     //         console.log(char[i])
+//     //         newString = string.replace(char[i], '')
+//     //     }
+//     // }
 
-    // return newString
+//     // return newString
 
-}
+// }
 
-console.log(removeChar('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou'))
+// console.log(removeChar('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou'))
 
 
 
@@ -143,5 +143,30 @@ console.log(removeChar('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou'))
 // }
 
 // console.log(products([1, 3, 9, 4]))
+
+function stringRotation(str1, str2){
+
+    if(str1.length !== str2.length){
+        return false;
+    }
+
+    let str1Repeat = str1.repeat(5)
+    console.log(str1Repeat)
+
+    if(str1Repeat.includes(str2)){
+        return true
+    }
+
+    else{
+        return false;
+    }
+
+
+
+}
+
+console.log(stringRotation("amazon", "azonma"))
+
+console.log(stringRotation("amazon", "azonam"))
 
 
