@@ -85,55 +85,63 @@
 
 
 
-// function removeChar(string, char){
+function removeChar(string, char){
 
-//     let newString = 0
+    // let newString = ''
 
-//     // for(let i = 0; i < string.length; i++){
+    for(let i = 0; i < string.length; i++){
+        console.log('i', string[i])
 
-//     //     for(let j = 0; j < char.length; j++){
+        for(let j = 0; j < char.length; j++){
+
+            console.log('j', char[j])
             
-//     //         if(string[i] !== char[j]){
-//     //             newString += string[i]
-//     //         }
-//     //     }
-//     // }
-
-//     for (let i = 0; i < char.length; i++){
-
-//         if(string.includes(char[i])){
-//             console.log(char[i])
-//             newString = string.replace(char[i], '')
-//         }
-//     }
-
-//     return newString
-
-// }
-
-// console.log(removeChar('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou'))
-
-
-function products(arr){
-
-    let products = []
-
-    for(let i = 0; i < arr.length; i++){
-
-        let product = 1 
-
-        for(let j = 0; j < arr.length; j++){
-            
-            if(j !== i){
-                product *= arr[j]
+            if(string[i] === char[j]){
+                string = string.slice(0, i) + '' + string.slice(i + 1)
             }
         }
-
-        products.push(product)
     }
 
-    return products;
+    return string;
+
+    // for (let i = 0; i < char.length; i++){
+
+    //     if(string.includes(char[i])){
+    //         console.log(char[i])
+    //         newString = string.replace(char[i], '')
+    //     }
+    // }
+
+    // return newString
 
 }
 
-console.log(products([1, 3, 9, 4]))
+console.log(removeChar('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou'))
+
+
+
+// function products(arr){
+
+//     let products = []
+
+//     for(let i = 0; i < arr.length; i++){
+
+//         let product = 1 
+
+//         for(let j = 0; j < arr.length; j++){
+            
+//             if(j !== i){
+//                 product *= arr[j]
+//             }
+//         }
+
+//         products.push(product)
+//     }
+
+//     return products;
+
+// }
+
+// console.log(products([1, 3, 9, 4]))
+
+
