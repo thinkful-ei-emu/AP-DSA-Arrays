@@ -14,7 +14,7 @@
 //     let filtered = []
 
 //     for (let i = 0; i < arr.length; i++){
-//         if(arr[i] < 5){
+//         if(arr[i] >= 5){
 //             filtered.push(arr[i])
 //         }
 //     }
@@ -48,11 +48,11 @@
 // console.log(findMax([4, 6, -3, 5, -2, 1]))
 
 
-function mergeArrays(arr1, arr2){
+// function mergeArrays(arr1, arr2){
 
-    let merged = arr1.concat(arr2).sort(function(a, b){return a-b});
+//     let merged = arr1.concat(arr2).sort(function(a, b){return a-b});
 
-    return merged;
+//     return merged;
 
     // let greater = 0;
 
@@ -79,6 +79,61 @@ function mergeArrays(arr1, arr2){
 
     // return merged;
 
+// }
+
+// console.log(mergeArrays([1, 3, 6, 8, 11], [2, 3, 5, 8, 9, 10]))
+
+
+
+// function removeChar(string, char){
+
+//     let newString = 0
+
+//     // for(let i = 0; i < string.length; i++){
+
+//     //     for(let j = 0; j < char.length; j++){
+            
+//     //         if(string[i] !== char[j]){
+//     //             newString += string[i]
+//     //         }
+//     //     }
+//     // }
+
+//     for (let i = 0; i < char.length; i++){
+
+//         if(string.includes(char[i])){
+//             console.log(char[i])
+//             newString = string.replace(char[i], '')
+//         }
+//     }
+
+//     return newString
+
+// }
+
+// console.log(removeChar('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou'))
+
+
+function products(arr){
+
+    let products = []
+
+    for(let i = 0; i < arr.length; i++){
+
+        let product = 1 
+
+        for(let j = 0; j < arr.length; j++){
+            
+            if(j !== i){
+                product *= arr[j]
+            }
+        }
+
+        products.push(product)
+    }
+
+    return products;
+
 }
 
-console.log(mergeArrays([1, 3, 6, 8, 11], [2, 3, 5, 8, 9, 10]))
+console.log(products([1, 3, 9, 4]))
